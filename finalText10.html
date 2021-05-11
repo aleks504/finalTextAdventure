@@ -1,0 +1,49 @@
+<html>
+<head>
+  <link rel = "stylesheet" href = "FinalTextAdventureStyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+  <script>
+  window.onload = function()
+  {
+    var userName = window.localStorage.getItem("userName");
+    var userNameDisplay = "";
+    for (var i = 0; i < userName.length; i++)
+    {
+      userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
+    }
+    document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
+  }
+    function checkAnswer()
+    {
+      var answer = document.getElementById('answer').value;
+
+      if (answer.toLowerCase() == "chocolate")
+      {
+        window.location.href = "finalText12.html";
+      }
+      else
+      {
+        window.location.href = "FinalTextAdventure.html";
+      }
+    }
+  </script>
+</head>
+<body>
+<center>
+  <p>DEFINITELY Don't Solve This Puzzle, <span id="userNameDisplay"></span></p>
+  <p>Which word goes before all the following words:</p>
+
+  <ul>
+    <p>Box</p>
+    <p>Brown</p>
+    <p>Chip</p>
+  </ul>
+<br><br>
+  <input type = "text" id = "answer" placeholder="Answer Here">
+  <input type = "button" onclick = "checkAnswer()" value = "GO" id = "OKButton">
+  <br><br><br><br><br><br><br>
+  <center>
+  <img src = "justsomegray.jpg" width = 100% height = 40%>
+</body>
+</html>

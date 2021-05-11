@@ -1,0 +1,155 @@
+body
+{
+  margin: 0px;
+}
+#title
+{
+  font-family: 'Orelega One', cursive;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  border: black 5px;
+}
+#username
+{
+  width: 15%;
+  height: 9%;
+  font-family: 'Orelega One', cursive;
+  font-size: 20px;
+  margin: 0px;
+}
+#button
+{
+  width: 15%;
+  height: 9%;
+  font-family: 'Orelega One', cursive;
+  color: black;
+  background-color: #578791;
+  font-size: 20px;
+  margin: 0px;
+}
+#move1
+{
+  width: 35%;
+  height: 10%;
+  font-family: 'Orelega One', cursive;
+  color: green;
+  background-color: black;
+  font-size: 25px;
+}
+#move2
+{
+  width: 35%;
+  height: 10%;
+  font-family: 'Orelega One', cursive;
+  color: red;
+  background-color: black;
+  font-size: 25px;
+}
+#move3
+{
+  width: 25%;
+  height: 10%;
+  font-family: 'Orelega One', cursive;
+  color: blue;
+  background-color: black;
+  font-size: 25px;
+}
+p{
+  font-family: 'Orelega One', cursive;
+  padding: 0px;
+  width: 50%;
+  height: 5%;
+  font-size: 22px;
+}
+ul
+{
+  font-size: 22px;
+}
+#button1
+{
+  width: 15%;
+  height: 10%;
+  color: navy;
+  outline-color: yellow;
+  background-color: #578791;
+  font-family: 'Orelega One', cursive;
+}
+#button2
+{
+  width: 15%;
+  height: 10%;
+  color: navy;
+  outline-color: yellow;
+  background-color: #6db3c2;
+  font-family: 'Orelega One', cursive;
+}
+#button3
+{
+  width: 15%;
+  height: 10%;
+  color: navy;
+  outline-color: yellow;
+  background-color: #9ed9e6;
+  font-family: 'Orelega One', cursive;
+}
+#OKButton
+{
+  width: 5%;
+  height: 7%;
+  background-color: #6db3c2;
+  outline-color: yellow;
+}
+#OKButton2
+{
+  width: 5%;
+  height: 7%;
+  background-color: #6db3c2;
+  outline-color: #a1fc03;
+}
+#Answer
+{
+  width: 15%;
+  height: 7%;
+}
+#Answer2
+{
+  width: 15%;
+  height: 7%;
+}
+#mysteryButton
+{
+  width: 10%;
+  height: 7%;
+  background-color: #7637db;
+  outline-color: #b3d9ff;
+}
+h2
+{
+  font-family: 'Monoton', cursive;
+}
+.color-0
+{
+  font-size: 100%;
+  color: rgb(0, 0, 0);
+}
+.color-1 {
+  font-size: 110%;
+  color: #1b3c85;
+}
+.color-2 {
+  font-size: 120%;
+  color: #284c9e;
+}
+.color-3 {
+  font-size: 130%;
+  color: #3662c7;
+}
+.color-4 {
+  font-size: 140%;
+  color: #4872d4;
+}
+.color-5 {
+  font-size: 150%;
+  color: #6a8dde;
+}

@@ -1,0 +1,21 @@
+<html>
+<head>
+  <script>
+    function getName()
+    {
+      var x = window.localStorage.setItem('userName');
+       document.getElementById('welcome').innerHTML = x;
+    }
+    function pageTwo()
+    {
+      window.location.href = "MoveToPage2.html";
+    }
+  </script>
+</head>
+<body>
+  <h1>Keeping Variables After Leaving Pages</h1>
+
+  <p id = "welcome"></p>
+  <input type = "button" value = "Save" onclick = "getName()">
+</body>
+</html>

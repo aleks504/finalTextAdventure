@@ -1,0 +1,43 @@
+<html>
+<head>
+  <link rel = "stylesheet" href = "FinalTextAdventureStyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+  <script>
+  window.onload = function()
+  {
+    var userName = window.localStorage.getItem("userName");
+    var userNameDisplay = "";
+    for (var i = 0; i < userName.length; i++)
+    {
+      userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
+    }
+    document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
+  }
+    function wrong()
+    {
+      document.getElementById('answer').innerHTML = "Come on, that was easy."
+      window.location.href = "FinalTextAdventure.html";
+    }
+    function correct()
+    {
+      window.location.href = "finalText2.html";
+    }
+  </script>
+</head>
+<body>
+  <center>
+<h1 id = "title">EASY</h1>
+<h3>Do NOT Click the Right Button, <span id="userNameDisplay"></span></h3>
+<br><br><br>
+<table>
+<tr><input type = "button" id = "button1" onclick = "wrong()" value = "1"> </tr>
+<tr><input type = "button" id = "button2" onclick = "wrong()" value = "2"> </tr>
+<tr><input type = "button" id = "button3" onclick = "correct()" value = "3"> </tr>
+<br><br><br>
+<p id = "answer"></p>
+<br><br><br><br><br><br><br>
+</center>
+<img src = "justsomegray.jpg" width = 100% height = 30%>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+  <link rel = "stylesheet" href = "FinalTextAdventureStyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+  <script>
+  window.onload = function()
+  {
+    var userName = window.localStorage.getItem("userName");
+    var userNameDisplay = "";
+    for (var i = 0; i < userName.length; i++)
+    {
+      userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
+    }
+    document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
+  }
+    function checkAnswer()
+    {
+      var answer = document.getElementById('answer').value;
+      if (answer.toLowerCase() == "egg" || answer.toLowerCase() == "an egg")
+      {
+        window.location.href = "finalTextEasy5.html";
+      }
+      else
+      {
+        window.location.href = "FinalTextAdventure.html";
+      }
+    }
+  </script>
+</head>
+<body>
+  <center>
+  <h1>Solve the Puzzle</h1>
+  <p>What has to be broken before you use it?</p>
+  <input type = "text" placeholder = "Answer Here" id = "answer">
+  <input type = "button" onclick = "checkAnswer()" value = "GO" id = "OKbutton2">
+  </center>
+</body>
+</html>

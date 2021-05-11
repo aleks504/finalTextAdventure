@@ -1,0 +1,51 @@
+<html>
+<head>
+  <link rel = "stylesheet" href = "FinalTextAdventureStyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+  <script>
+  window.onload = function()
+  {
+    var userName = window.localStorage.getItem("userName");
+    var userNameDisplay = "";
+    for (var i = 0; i < userName.length; i++)
+    {
+      userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
+    }
+    document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
+  }
+    function checkAnswer()
+    {
+      var answer = document.getElementById('answer').value;
+      var answer2 = document.getElementById('answer2').value;
+      if (answer.toLowerCase() == "teal" && answer2.toLowerCase() == "steal")
+      {
+        window.location.href = "finalText11.html";
+      }
+    else
+      {
+        window.location.href = "FinalTextAdventure.html";
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <center>
+  <p>DON'T Solve this Puzzle...</p>
+  <p>Find a word to fit the first clue, then add one letter to give a word to fit the second clue.
+    What are the two words?</p>
+  <table>
+    <br><br>
+    <tr><p>GREENISH BLUE</p></tr>
+    <tr><p>GAIN ILLEGALLY</p></tr>
+    <br><br>
+  <input type = "text" id = "answer" placeholder="First Answer Here">
+  <input type = "text" id = "answer2" placeholder = "Second Answer Here">
+  <input type = "button" value = "GO" onclick = "checkAnswer()" id = "OKButton">
+  <br><br><br><br><br><br><br>
+  </center>
+  <img src = "justsomegray.jpg" width = 100% height = 45%>
+
+</body>
+</html>

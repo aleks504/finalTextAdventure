@@ -1,0 +1,41 @@
+<html>
+<head>
+  <link rel = "stylesheet" href = "FinalTextAdventureStyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+<script>
+window.onload = function()
+{
+  var userName = window.localStorage.getItem("userName");
+  var userNameDisplay = "";
+  for (var i = 0; i < userName.length; i++)
+  {
+    userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
+  }
+  document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
+}
+  function correct()
+  {
+    window.location.href = "finalText10.html";
+  }
+  function incorrect()
+  {
+    window.location.href = "FinalTextAdventure.html";
+  }
+</script>
+</head>
+<body>
+  <center>
+  <h2 id = "title">There Really is No Need to Find the Pattern</h2>
+  <br>
+  <p>In their gardens Leona sees a blackbird, Paul sees a sparrow, Abdul sees a magpie and Olga sees a robin.
+    Does Heather see a thrush or a finch?</p>
+    <br><br><br><br><br>
+<input type = "button" value = "Thrush" id = "button1" onclick = "correct()">
+<input type = "button" value = "Finch" id = "button2" onclick="incorrect()">
+<br><br><br><br><br><br><br>
+
+  </center>
+  <img src = "justsomegray.jpg" width = 100% height = 40%>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+  <link rel = "stylesheet" href = "FinalTextMysteryStyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+  <script>
+    window.onload = function()
+    {
+      var userName = window.localStorage.getItem("userName");
+      var userNameDisplay = "";
+      for (var i = 0; i < userName.length; i++)
+      {
+        userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
+      }
+      document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
+    }
+    function checkAnswer()
+    {
+      var answer = document.getElementById('number').value;
+      if (answer.toLowerCase() == "a map" || answer.toLowerCase() == "map")
+      {
+        document.getElementById('textArea').innerHTML = "Great Job! You Won!";
+      }
+      else
+      {
+        document.getElementById('textArea').innerHTML = "Nice Try, Click the Button Below to Reveal Answer";
+        document.getElementById('textArea2').innerHTML = "<input type = 'button' id = 'button' onclick = 'revealAnswer()' value = 'Reveal Answer'>";
+      }
+    }
+    function revealAnswer()
+    {
+      document.getElementById('textArea3').innerHTML = "The Correct Answer Was: A Map";
+    }
+  </script>
+</head>
+<body>
+  <center>
+  <h1>So You Decided to Keep Going</h1>
+  <h1>Here is the Hardest Puzzle of All, Are you Ready, <span id="userNameDisplay"></span>?</h1>
+  <p>I have cities but not houses</p> <p>I have mountains, but no trees</p><p> I have water, but not fish.</p><p> What Am I?</p>
+  <input type = "text" placeholder="Answer Here" id = "number">
+  <input type = "button" onclick = "checkAnswer()" id = "button" value = "GO">
+  <p id = "textArea"></p>
+  <p id = "textArea2"></p>
+  <p id = "textArea3"></p>
+  </center>
+</body>
+</html>

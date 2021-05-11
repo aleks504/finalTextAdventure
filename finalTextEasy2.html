@@ -1,0 +1,42 @@
+<html>
+<head>
+  <link rel = "stylesheet" href = "FinalTextAdventureStyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+  <script>
+  window.onload = function()
+  {
+    var userName = window.localStorage.getItem("userName");
+    var userNameDisplay = "";
+    for (var i = 0; i < userName.length; i++)
+    {
+      userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
+    }
+    document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
+  }
+  function checkAnswer()
+  {
+    var answer = document.getElementById('answer').value;
+    if (answer.toLowerCase() == "river" || answer.toLowerCase() == "a river")
+    {
+      window.location.href = "finalTextEasy3.html";
+    }
+    else
+     {
+      window.location.href = "FinalTextAdventure.html";
+    }
+  }
+  </script>
+</head>
+<body>
+  <center>
+  <h1 id = "title">DON'T Solve the Riddle</h1>
+  <p>What Has A Bank, but No Money?</p>
+  <br>
+  <input type = "text" id = "answer" placeholder="Answer Here">
+  <input type = "button" id = "OKbutton2" onclick = "checkAnswer()"value = "GO">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </center>
+  <img src = "justsomegray.jpg" width = 100% height = 45%>
+</body>
+</html>
