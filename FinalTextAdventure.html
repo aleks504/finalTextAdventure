@@ -1,0 +1,47 @@
+<html>
+<head>
+    <link rel = "stylesheet" href = "FinalTextAdventureStyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+
+    <script>
+      function savename()
+      {
+        var name = document.getElementById('username').value;
+        window.localStorage.setItem('userName', name);
+        displayname();
+      }
+      function displayname()
+      {
+        document.title = "Welcome " + window.localStorage.getItem('userName');
+      }
+      function movepage2()
+      {
+        window.location.href = "finalText1.html";
+      }
+      function movetoeasy()
+      {
+        window.location.href = "finalTextEasy1.html";
+      }
+      function movetomysterymode()
+      {
+        window.location.href = "finalTextMystery1.html";
+      }
+    </script>
+</head>
+<body>
+<center>
+  <br>
+
+<h1 id = "title">Do NOT Play This Game</h1>
+<br><hr><br><br><br>
+<input type = "text" placeholder="Name Here" id = "username">
+<input type = "button" value = "CLICK TO SAVE"onclick = "savename()"id = "button">
+<br><br><br><br><br><br><br>
+<input type = "button" id = "move1" value = "Do NOT Click this Button (Easy)" onclick = "movetoeasy()">
+<input type = "button" id = "move2" value = "Do NOT Click this Button Either (Hard)" onclick = "movepage2()">
+<br><br><br><br><br><br><br>
+</center>
+<img src = "justsomegray.jpg" width = 100% height = 25%>
+</body>
+</html>
