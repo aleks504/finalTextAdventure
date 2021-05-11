@@ -1,39 +1,47 @@
 <html>
 <head>
-  <link rel = "stylesheet" href = "FinalTextMysteryStyle.css">
+  <link rel = "stylesheet" href = "FinalTextAdventureStyle.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
   <script>
-  window.onload = function()
-  {
-    var userName = window.localStorage.getItem("userName");
-    var userNameDisplay = "";
-    for (var i = 0; i < userName.length; i++)
+    window.onload = function()
     {
-      userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
-    }
-    document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
-  }
-    function Stay()
-    {
-      window.location.href = "finalTextMystery2.html";
-
-    }
-    function goHome()
-    {
-      window.location.href = "FinalTextAdventure.html";
+      var userName = window.localStorage.getItem("userName");
+      var userNameDisplay = "";
+      for (var i = 0; i < userName.length; i++)
+      {
+        userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
+      }
+      document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
     }
 
+    function checkAnswer()
+    {
+      var answer = document.getElementById('answer').value;
+
+      if (answer.toLowerCase() == "breath" || answer.toLowerCase() == "your breath")
+      {
+        window.location.href = "finalTextEasy2.html";
+      }
+      else
+      {
+        window.location.href = "FinalTextAdventure.html";
+      }
+
+    }
   </script>
 </head>
 <body>
   <center>
-    <h1>Are You Sure, <span id="userNameDisplay"></span>?</h1>
-    <input type = "button" value = "Stay" onclick = "Stay()" id = "button">
-    <input type = "button" value = "Go Home" onclick = "goHome()" id = "button">
-    <p id = "display"></p>
+  <h1>Answer the Riddle, <span id="userNameDisplay"></span></h1>
+  <p>Hard to Catch, Easy to Hold, Hard to See, Unless it's cold.</p>
+  <br>
+  <input type = "text" id = "answer" placeholder = "Answer Here">
+  <input type = "button" id = "OKbutton2" value = "GO" onclick = "checkAnswer()">
 
-    <p id = result2></p>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
   </center>
+  <img src = "justsomegray.jpg" width = 100% height = 40%>
+
 </body>
 </html>
