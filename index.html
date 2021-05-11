@@ -5,17 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
 
     <script>
-    window.onload = function()
-    {
-      var userName = window.localStorage.getItem("userName") || "";
-      var userNameDisplay = "";
-      for (var i = 0; i < userName.length; i++)
-      {
-        userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
-      }
-      document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
-    }
-      function savename()
+         function savename()
       {
         var name = document.getElementById('username').value;
         window.localStorage.setItem('userName', name);
