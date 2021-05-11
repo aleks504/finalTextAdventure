@@ -1,0 +1,52 @@
+<html>
+<head>
+  <link rel = "stylesheet" href = "FinalTextAdventureStyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <script>
+
+  window.onload = function()
+  {
+    var userName = window.localStorage.getItem("userName");
+    var userNameDisplay = "";
+    for (var i = 0; i < userName.length; i++)
+    {
+      userNameDisplay = userNameDisplay + "<span class='color-" + i%6 + "'>" + userName[i] + "</span>";
+    }
+    document.getElementById("userNameDisplay").innerHTML = userNameDisplay;
+  }
+  function gobackhome()
+  {
+
+    document.getElementById('options').innerHTML = "<input type = 'button' value = 'YES' onclick = 'home()' id = 'annoyingbutton'>";
+    document.getElementById('options2').innerHTML = "<input type = 'button' value = 'no...' onclick = 'mystery()' id = 'annoyingbutton'>";
+  }
+  function home()
+  {
+    window.location.href = "FinalTextAdventure.html";
+  }
+  function mystery()
+  {
+    window.location.href = "finalTextMystery1.html";
+  }
+  </script>
+</head>
+<body>
+  <center>
+    <br><br>
+  <h2>Congratulations <span id="userNameDisplay"></span>! You finished!</h2>
+  <p>Are you Sure you Want to Go Home? </p>
+  <br>
+  <input type = "button" onclick = "gobackhome()" value = "Home?" id = "mysteryButton">
+    <p id = "options"></p>
+    <p id = "options2"></p>
+  <br><br><br><br><br><br><br>
+
+  <img src = "justsomegray.jpg" width = 100% height = 40%>
+
+
+  </center>
+</body>
+</html>
